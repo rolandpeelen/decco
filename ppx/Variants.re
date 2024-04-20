@@ -176,7 +176,7 @@ let generateCodecs = ({ doEncode, doDecode } as generatorSettings, constrDecls, 
                                 Decco.error("Expected variant, found empty array", v)
 
                             | Js.Json.JSONArray(jsonArr) => {
-                                let tagged = Js.Array.map(Js.Json.classify, jsonArr);
+                                let tagged = Js.Array.map(~f=Js.Json.classify, jsonArr);
                                 [%e decoderSwitch]
                             }
 

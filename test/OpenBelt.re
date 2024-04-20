@@ -1,9 +1,6 @@
 open Jest;
 open TestUtils;
 
-[@warning "-33"]
-open Belt;
-
 [@decco] type variant = A | B(int) | C(int, string);
 
 describe("variant", () => {

@@ -1,7 +1,7 @@
 (library
   (name DeccoPpx)
   (public_name decco.ppx)
-  (libraries 
+  (libraries
     ppxlib
     reason)
   (flags 

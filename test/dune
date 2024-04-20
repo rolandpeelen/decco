@@ -1,6 +1,7 @@
 (melange.emit
  (target test)
  (libraries 
+   melange.belt
    melange-jest.jest
    decco.lib)
  (preprocess

@@ -269,7 +269,7 @@ describe("array", () => {
 
     describe("a_decode", () => {
         let json = [|"10","20"|]
-            |> Js.Array.map(Js.Json.string)
+            |> Js.Array.map(~f=Js.Json.string)
             |> Js.Json.array;
         testGoodDecode("good", a_decode(s_decode),json, [|"10","20"|]);
 
@@ -298,7 +298,7 @@ describe("list", () => {
 
     describe("l_decode", () => {
         let json = [|"10", "20"|]
-            |> Js.Array.map(Js.Json.string)
+            |> Js.Array.map(~f=Js.Json.string)
             |> Js.Json.array;
         testGoodDecode("good", l_decode(s_decode), json, ["10", "20"]);
 

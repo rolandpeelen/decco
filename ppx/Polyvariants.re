@@ -194,7 +194,7 @@ let generateCodecs = ({ doEncode, doDecode } as generatorSettings, rowFields, un
                           Decco.error("Expected polyvariant, found empty array", v)
 
                       | Js.Json.JSONArray(jsonArr) => {
-                          let tagged = Js.Array.map(Js.Json.classify, jsonArr);
+                          let tagged = Js.Array.map(~f=Js.Json.classify, jsonArr);
                           [%e decoderSwitch]
                       }
 
